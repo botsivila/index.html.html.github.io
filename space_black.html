@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="space_black.css">
+</head>
+<body>
+    <div class="contaner">
+        <div class="wrapper">
+            <div class="product-box">
+                <div class="all-images">
+                <div class="small-images">
+                    <img src="../img/a16.png" onclick="clicking(this)">
+                    <img src="../img/Space_Black_2.jpg" onclick="clicking(this)">
+                    <img src="../img/Space_Black_3.jpg" onclick="clicking(this)">
+                    <img src="../img/Space_Black_4.jpg" onclick="clicking(this)">
+                </div>
+                <div class="main-images">
+                    <img src="../img/a16.png" id="imagebox">
+                </div>
+            </div>
+                
+            </div>
+
+            <div class="text">
+                <div class="contact">
+                    <p class="brand">Brand : Apple </p>
+                    <h2>APPLE iphone 14 ( gray, 128 GB )</h2>
+                    <div class="rewiew">
+                        <span>(4.6)</span>
+                        <span class="fa fa-star"></span>
+                    </div>
+
+                    <div class="price-box">
+                        <p class="price">&#8877; 77,900</p>
+                        <strike>&#8877; 89,900</strike>
+                    </div>
+                    <p>Size : <select name="link" id="" size="1" onchange="window.location.href=this.value;">
+                        <option value="index1.html">Deep purple</option>
+                        <option value="gold.html">Gold</option>
+                        <option value="connect2.html">Silver</option>
+                        <option value="space_black.html">Space Black</option>
+                        <option value=""></option>
+                    </select></p>
+
+                    <p>Quantity <input type="text" value="1"></p>
+                    <button>
+                        <span class="fa fa-shopping-cart"></span>
+                        Add to cart
+                    </button>
+                    <button class="buy">
+                        <span class="fa fa-shopping-cart"></span>
+                        Buy now
+                    </button>
+                </div>
+            </div>
+        </div>
+      </div>
+
+      <script>
+
+        function clicking(smallImg){ 
+            var fullImg = document.getElementById("imagebox");
+            fullImg.src = smallImg.src
+        }
+      </script>
+      
+</body>
+</html>

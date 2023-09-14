@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <link rel="stylesheet" href="test.css">
+</head>
+
+<body>
+    <div class="product-card">
+        <div class="logo-cart">
+            <img src="/img/pngwing.com.png" alt="logo">
+            <!-- <i class='bx bx-shopping-bag'></i> -->
+        </div>
+        <div class="main-images">
+            <img id="blue"   class="blue active" src="../all sery/compare_iphone14_pro_max_deep_purple__diuabahv3w4m_large.jpg"     alt="blue">
+            <img id="pink"   class="pink"        src="../all sery/compare_iphone14_pro_max_gold__d4ji4p0rioeq_large.jpg"     alt="blue">
+            <img id="yellow" class="yellow"      src="../all sery/compare_iphone14_pro_max_silver__bwa8sk5umjf6_large.jpg"   alt="blue">
+            <img id="gray"   class="gray"        src="../all sery/compare_iphone14_pro_max_space_black__bzjjitrfff2a_large.jpg"     alt="blue">
+        </div>
+        <div class="shoe-details">
+            <div class="stars">
+                <!-- <i class='bx bxs-star'></i>
+                <i class='bx bxs-star'></i>
+                <i class='bx bxs-star'></i> 
+                <i class='bx bxs-star'></i>
+                <i class='bx bx-star'></i> -->
+            </div>
+        </div>
+        <div class="color-price">
+            <div class="color-option">
+                <!-- <span class="color">Color:</span> -->
+                <div class="circles">
+                    <span class="circle blue active" id="blue"></span>
+                    <span class="circle pink "       id="pink"></span>
+                    <span class="circle yellow "     id="yellow"></span>
+                    <span class="circle gray "       id="gray"></span>
+                </div>
+            </div>
+           
+        </div>
+       
+    </div>
+
+
+    <script>
+        let circle = document.querySelector(".color-option");
+
+        circle.addEventListener("click", (e)=>{
+            let target = e.target;
+            if (target.classList.contains("circle")){
+                circle.querySelector(".active").classList.remove("active");
+                target.classList.add("active");
+                document.querySelector(".main-images .active").classList.remove("active");
+                document.querySelector(`.main-images .${target.id}`).classList.add("active");
+            }
+        });
+    </script>
+
+</body>
+
+</html>
